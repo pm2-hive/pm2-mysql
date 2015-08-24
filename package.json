@@ -1,0 +1,22 @@
+{
+  "name": "pm2-mysql",
+  "version": "0.0.1",
+  "description": "Mysql module", 
+  "dependencies": {
+    "pmx"     : "*",
+    "mysql"   : "*",
+    "shelljs" :  "*"
+  },
+  "config": {           
+     "host" : "localhost",
+     "user" : "root",
+     "password" : "root"
+  },
+  "apps" : [{             
+    "merge_logs"         : true,
+    "max_memory_restart" : "200M",
+    "script"             : "index.js"
+  }],
+  "author": "Keymetrics Inc.",
+  "license": "AGPL-3.0"        
+}
