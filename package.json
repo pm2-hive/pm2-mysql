@@ -10,7 +10,7 @@
   "config": {           
      "host" : "localhost",
      "user" : "root",
-     "password" : "root"
+     "password" : ""
   },
   "apps" : [{             
     "merge_logs"         : true,

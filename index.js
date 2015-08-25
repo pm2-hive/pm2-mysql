@@ -1,5 +1,4 @@
 var pmx     = require('pmx');
-var mysql   = require('mysql');
 
 // Initialize the module
 var conf    = pmx.initModule({
@@ -57,19 +56,6 @@ var conf    = pmx.initModule({
     status_check : ['latency', 'event loop', 'query/s']
     //= Status Green / Yellow / Red (maybe for probes?)
 
-});
-
-conf.connection = mysql.createConnection({
-  host     : conf.module_conf.host,
-  user     : conf.module_conf.user,
-  password : conf.module_conf.password
-});
-
-conf.connection.connect(function(err) {
-  if (err) {
-	pmx.notify(err);
-	return;
-  }
 });
 
 var queries = require('./lib/queries');
