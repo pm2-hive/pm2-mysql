@@ -1,6 +1,6 @@
 {
   "name": "pm2-mysql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mysql module", 
   "dependencies": {
     "pmx"     : "*",

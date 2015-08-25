@@ -16,14 +16,14 @@ var conf    = pmx.initModule({
 
       // Logo to be displayed on the top left block
       // Must be https
-      logo : 'https://www.mysql.com/common/logos/logo-mysql-170x115.png',
+      logo : 'https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1280px-MySQL.svg.png',
 
       // 0 = main element
       // 1 = secondary
       // 2 = main border
       // 3 = secondary border
       // 4 = text color (not implemented yet)
-      theme : ['#F79618', '#015A84', 'black', '#F79618'],
+      theme : ['#262E35', '#015A84', '#F79618', '#F79618'],
 
       // Toggle horizontal blocks above main widget
       el : {
@@ -67,11 +67,9 @@ conf.connection = mysql.createConnection({
 
 conf.connection.connect(function(err) {
   if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
+	pmx.notify(err);
+	return;
   }
-
-  console.log('connected as id ' + conf.connection.threadId);
 });
 
 var queries = require('./lib/queries');
