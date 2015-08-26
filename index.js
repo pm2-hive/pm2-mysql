@@ -4,9 +4,9 @@ var pmx     = require('pmx');
 var conf    = pmx.initModule({
 
     pid              : pmx.resolvePidPaths(['var/run/mysqld/mysqld.pid',
-                                             'var/run/mysql/mysql.pid',
-                                             'var/run/mysql.pid',
-                                             'var/run/mysqld.pid']),
+                                            'var/run/mysql/mysql.pid',
+                                            'var/run/mysql.pid',
+                                            'var/run/mysqld.pid']),
 
     widget : {
 
@@ -27,7 +27,7 @@ var conf    = pmx.initModule({
       // Toggle horizontal blocks above main widget
       el : {
         probes : true,
-        actions: false
+        actions: true
       },
 
       block : {
@@ -59,3 +59,8 @@ var conf    = pmx.initModule({
 });
 
 var queries = require('./lib/queries');
+
+pmx.action('restart', function(reply) {
+  var child = shelljs.exec('/etc/init.d/redis-server restart');
+  return reply(child);
+});
