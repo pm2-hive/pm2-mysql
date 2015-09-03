@@ -4,8 +4,7 @@
   "description": "Mysql module", 
   "dependencies": {
     "pmx"     : "*",
-    "mysql"   : "*",
-    "shelljs" :  "*"
+    "mysql"   : "*"
   },
   "config": {           
      "host" : "localhost",
