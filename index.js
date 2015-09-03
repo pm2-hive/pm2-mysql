@@ -59,8 +59,3 @@ var conf    = pmx.initModule({
 });
 
 var queries = require('./lib/queries');
-
-pmx.action('restart', function(reply) {
-  var child = shelljs.exec('/etc/init.d/redis-server restart');
-  return reply(child);
-});
