@@ -1,6 +1,6 @@
 {
   "name": "pm2-mysql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Mysql module", 
   "dependencies": {
     "pmx"     : "*",
@@ -8,6 +8,7 @@
   },
   "config": {           
      "host" : "localhost",
+     "port" : 3306,
      "user" : "root",
      "password" : ""
   },
