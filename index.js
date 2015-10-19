@@ -55,7 +55,6 @@ var conf    = pmx.initModule({
     // Status (in the future, not implemented yet)
     status_check : ['latency', 'event loop', 'query/s']
     //= Status Green / Yellow / Red (maybe for probes?)
-
+  }, function(err, conf) {
+    var queries = require('./lib/queries');
 });
-
-var queries = require('./lib/queries');
