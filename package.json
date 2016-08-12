@@ -18,5 +18,5 @@
     "script"             : "index.js"
   }],
   "author": "Keymetrics Inc.",
-  "license": "AGPL-3.0"        
+  "license": "MIT"        
 }
