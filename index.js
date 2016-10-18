@@ -9,10 +9,10 @@ var pmx     = require('pmx');
 // Initialize the module
 var conf    = pmx.initModule({
 
-    pid              : pmx.resolvePidPaths(['var/run/mysqld/mysqld.pid',
-                                            'var/run/mysql/mysql.pid',
-                                            'var/run/mysql.pid',
-                                            'var/run/mysqld.pid']),
+    pid              : pmx.resolvePidPaths(['/var/run/mysqld/mysqld.pid',
+                                            '/var/run/mysql/mysql.pid',
+                                            '/var/run/mysql.pid',
+                                            '/var/run/mysqld.pid']),
 
     widget : {
 
