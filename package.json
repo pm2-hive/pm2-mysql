@@ -1,22 +1,30 @@
 {
   "name": "pm2-mysql",
-  "version": "0.0.6",
-  "description": "Mysql module", 
+  "version": "0.1.0",
+  "description": "Mysql module",
   "dependencies": {
-    "pmx"     : "*",
-    "mysql"   : "*"
+    "hwmon": "https://github.com/didil/node-hwmon#274445c1d7cbd8158f3549ef711d1bd6f565e828",
+    "mysql": "^2.12.0",
+    "pmx": "*",
+    "shelljs": "^0.7.5"
   },
-  "config": {           
-     "host" : "localhost",
-     "port" : 3306,
-     "user" : "root",
-     "password" : ""
+  "config": {
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "",
+    "refreshRate": 1000,
+    "dbDiskName": "sda",
+    "slowQueriesLog": "/var/log/mysql/slow-queries.log",
+    "generalLog": "/var/log/mysql/general.log"
   },
-  "apps" : [{             
-    "merge_logs"         : true,
-    "max_memory_restart" : "200M",
-    "script"             : "index.js"
-  }],
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "index.js"
+    }
+  ],
   "author": "Keymetrics Inc.",
-  "license": "MIT"        
+  "license": "MIT"
 }
