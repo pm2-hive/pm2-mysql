@@ -8,7 +8,7 @@ PM2 module to monitor a MySQL server with Keymetrics
 
 ## Requirements
 
-This module requires a MySQL install (tested against v5.6).
+This module requires a MySQL install (tested against v5.6). Optionally, to monitor the DB disk Read/Write you will need `iostat` located in the `sysstat` package.
 
 ### Slow Queries
 
