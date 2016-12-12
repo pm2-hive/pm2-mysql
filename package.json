@@ -1,6 +1,6 @@
 {
   "name": "pm2-mysql",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mysql module",
   "dependencies": {
     "hwmon": "https://github.com/didil/node-hwmon#274445c1d7cbd8158f3549ef711d1bd6f565e828",
@@ -25,7 +25,6 @@
   "apps": [
     {
       "merge_logs": true,
-      "max_memory_restart": "200M",
       "script": "index.js"
     }
   ],
