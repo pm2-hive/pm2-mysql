@@ -5,9 +5,12 @@
  */
 
 var pmx     = require('pmx');
+var mysqlClientFactory = require('./lib/clientFactory.js');
+var mysqlStats = require('./lib/stats.js');
+var mysqlActions = require('./lib/actions.js');
 
 // Initialize the module
-var conf    = pmx.initModule({
+pmx.initModule({
 
     pid              : pmx.resolvePidPaths(['/var/run/mysqld/mysqld.pid',
                                             '/var/run/mysql/mysql.pid',
@@ -54,7 +57,7 @@ var conf    = pmx.initModule({
         meta_block : false,
 
         // Name of custom metrics to be displayed as a "major metrics"
-        main_probes : ['questions/s', 'connections/s', 'Total Processes', 'Threads Running', 'Pending Reads', 'Buffer Read']
+        main_probes : ['questions/s',  'Open Tables', 'Total Processes', 'IO Read kb/s', 'Row Lock Waits', '% Max Used Connections']
       },
     },
 
@@ -62,5 +65,11 @@ var conf    = pmx.initModule({
     status_check : ['latency', 'event loop', 'query/s']
     //= Status Green / Yellow / Red (maybe for probes?)
   }, function(err, conf) {
-    var queries = require('./lib/queries');
+  var mysqlClient = mysqlClientFactory.build(conf);
+
+  // Init metrics refresh loop
+  mysqlStats.init(mysqlClient);
+
+  // Init actions
+  mysqlActions.init(mysqlClient);
 });
