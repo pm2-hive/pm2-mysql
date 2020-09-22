@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Mysql module",
   "dependencies": {
-    "hwmon": "https://github.com/didil/node-hwmon#274445c1d7cbd8158f3549ef711d1bd6f565e828",
-    "mysql": "^2.12.0",
-    "pmx": "*",
+    "hwmon": "file:../node-hwmon",
+    "mysql": "^2.18.1",
+    "pmx": "^1.6.7",
     "shell-escape": "^0.2.0",
-    "shelljs": "^0.7.5"
+    "shelljs": "^0.7.8"
   },
   "config": {
     "host": "localhost",
@@ -16,10 +16,10 @@
     "password": "",
     "refreshRate": 1000,
     "dbDiskName": "sda",
-    "slowQueriesLog": "/var/log/mysql/slow-queries.log",
-    "generalLog": "/var/log/mysql/general.log",
+    "slowQueriesLog": "C:\ProgramData\MySQL\MySQL Server 8.0\Data\logs\slow-queries.log",
+    "generalLog": "C:\ProgramData\MySQL\MySQL Server 8.0\Data\logs\general.log",
     "lastQueriesSize": 100,
-    "errorLog": "/var/log/mysql/error.log",
+    "errorLog": "C:\ProgramData\MySQL\MySQL Server 8.0\Data\logs\error.log",
     "lastErrorsSize": 100
   },
   "apps": [
