@@ -12,8 +12,8 @@
   "config": {
     "host": "localhost",
     "port": 3306,
-    "user": "root",
-    "password": "YOUR_PASSWORD_HERE",
+    "user": "pm2_monitor",
+    "password": "XdmVD@Pfn^KFk=GYgS77GhY?RN*c3X@bYGqSykB$5t*9eVkcFn7e!UWuEC2x4rr2xkUmPtQN",
     "refreshRate": 1000,
     "dbDiskName": "sda",
     "slowQueriesLog": "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Data\\logs\\slow-queries.log",
