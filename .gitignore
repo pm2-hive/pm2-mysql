@@ -1,5 +1,12 @@
-node_modules
+.git/
+.idea/
+logs/
+node_modules/
+pids/
+*.pid
 *.log
 *.rdb
-.idea/
 29
+/config.json
+ecosystem.config.js
+package-lock.json
