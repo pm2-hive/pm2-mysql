@@ -30,8 +30,8 @@
   ],
   "author": "Keymetrics Inc.",
   "contributor": [{ "name"  : "Eric Reinhardt",
-                     "email" : "eric@imjustblue.com",
-                     "url"   : "https://www.imjustblue.com/"
-                  }]
+                    "email" : "eric@imjustblue.com",
+                    "url"   : "https://www.imjustblue.com/"
+                  }],
   "license": "MIT"
 }
