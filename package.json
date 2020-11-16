@@ -1,7 +1,7 @@
 {
-  "name": "pm2-mysql",
-  "version": "1.0.0",
-  "description": "Mysql module",
+  "name": "pm2-mysql2-monitor",
+  "version": "1.1.0",
+  "description": "MySQL Monitor for PM2",
   "dependencies": {
     "hwmon": "github:didil/node-hwmon",
     "mysql2": "^2.2.5",
@@ -13,13 +13,13 @@
     "host": "localhost",
     "port": 3306,
     "user": "pm2_monitor",
-    "password": "XdmVD@Pfn^KFk=GYgS77GhY?RN*c3X@bYGqSykB$5t*9eVkcFn7e!UWuEC2x4rr2xkUmPtQN",
+    "password": "",
     "refreshRate": 1000,
     "dbDiskName": "sda",
-    "slowQueriesLog": "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Data\\logs\\slow-queries.log",
-    "generalLog": "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Data\\logs\\general.log",
+    "slowQueriesLog": "/var/log/mysql/slow.log",
+    "generalLog": "/var/log/mysql/general.log",
     "lastQueriesSize": 100,
-    "errorLog": "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Data\\logs\\error.log",
+    "errorLog": "/var/log/mysql/error.log",
     "lastErrorsSize": 100
   },
   "apps": [
@@ -29,5 +29,9 @@
     }
   ],
   "author": "Keymetrics Inc.",
+  "contributor": [{ "name"  : "Eric Reinhardt",
+                     "email" : "eric@imjustblue.com",
+                     "url"   : "https://www.imjustblue.com/"
+                  }]
   "license": "MIT"
 }
